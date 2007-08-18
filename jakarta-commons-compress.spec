@@ -93,24 +93,23 @@ Requires(postun): /bin/rm
 
 %prep
 %setup -q -n %{base_name}-%{version}-%{svnrev}
-#find . -name "*.jar" -exec rm -f {} \;
-for j in $(find . -name "*.jar"); do
-    mv $j $j.no
-done
+find . -name "*.jar" -exec rm -f {} \;
 cp %{SOURCE5} .
 cp %{SOURCE6} build.xml
 
+%if %{with_maven}
 export DEPCAT=$(pwd)/commons-compress-0.1-depcat.new.xml
 echo '<?xml version="1.0" standalone="yes"?>' > $DEPCAT
 echo '<depset>' >> $DEPCAT
 for p in $(find . -name project.xml); do
     pushd $(dirname $p)
-    /usr/bin/saxon project.xml %{SOURCE1} >> $DEPCAT
+    %{_bindir}/saxon project.xml %{SOURCE1} >> $DEPCAT
     popd
 done
 echo >> $DEPCAT
 echo '</depset>' >> $DEPCAT
-/usr/bin/saxon $DEPCAT %{SOURCE2} > commons-compress-0.1-depmap.new.xml
+%{_bindir}/saxon $DEPCAT %{SOURCE2} > commons-compress-0.1-depmap.new.xml
+%endif
 
 %patch0 -b .sav
 
@@ -119,7 +118,7 @@ echo '</depset>' >> $DEPCAT
 for p in $(find . -name project.xml); do
     pushd $(dirname $p)
     cp project.xml project.xml.orig
-    /usr/bin/saxon -o project.xml project.xml.orig %{SOURCE3} map=%{SOURCE4}
+    %{_bindir}/saxon -o project.xml project.xml.orig %{SOURCE3} map=%{SOURCE4}
     popd
 done
 
