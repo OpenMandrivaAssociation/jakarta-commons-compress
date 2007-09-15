@@ -43,7 +43,7 @@
 
 Name:           jakarta-%{base_name}
 Version:        0.1
-Release:        %mkrel 4.0.2
+Release:        %mkrel 4.0.3
 Epoch:          0
 Summary:        Commons Compress
 License:        Apache Software License
@@ -70,8 +70,6 @@ BuildRequires:  saxon-scripts
 %endif
 %if %{gcj_support}
 BuildRequires:          java-gcj-compat-devel
-Requires(post):         java-gcj-compat
-Requires(postun):       java-gcj-compat
 %endif
 %if ! %{gcj_support}
 BuildArch:      noarch
