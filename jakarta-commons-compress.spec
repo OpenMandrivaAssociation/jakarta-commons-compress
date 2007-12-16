@@ -43,7 +43,7 @@
 
 Name:           jakarta-%{base_name}
 Version:        0.1
-Release:        %mkrel 4.0.3
+Release:        %mkrel 4.0.4
 Epoch:          0
 Summary:        Commons Compress
 License:        Apache Software License
@@ -61,6 +61,7 @@ Source6:        commons-compress-0.1-build.xml
 
 Patch0:         commons-compress-0.1-project_xml.patch
 
+BuildRequires:  java-rpmbuild
 BuildRequires:  ant >= 0:1.6
 BuildRequires:  junit
 %if %{with_maven}
