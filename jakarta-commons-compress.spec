@@ -49,6 +49,7 @@ Summary:        Commons Compress
 License:        Apache Software License
 Url:            http://jakarta.apache.org/commons/sandbox/compress/
 Group:          Development/Java
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0:        commons-compress-0.1-561811.tar.gz
 # svn export http://svn.apache.org/repos/asf/commons/sandbox/compress/trunk commons-compress-0.1-561811
 
