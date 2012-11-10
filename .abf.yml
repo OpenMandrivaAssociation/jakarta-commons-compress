@@ -1,0 +1,8 @@
+sources:
+  "commons-compress-0.1-561811.tar.gz:"	cec735a72bfed7dbc1e664084002c1c8fe1c9330
+  "commons-compress-0.1-build.xml:"	a93ef5d90ccaaa5ed2fb7f9a76ef9541cae0961a
+  "commons-compress-0.1-jpp-depmap.xml:"	3a7d56bf872bfae14c4ec47d9bb77a5c26b008e9
+  "commons-sandbox-build-project.xml:"	b03ff79547816258a7c490053ffa1a80c75d9f94
+  "pom-maven2jpp-depcat.xsl:"	5861cae5f65e559ece90a7342d182f5a534b65de
+  "pom-maven2jpp-mapdeps.xsl:"	a837c6d38ea6fb127ba5bf20d917c1e8af791120
+  "pom-maven2jpp-newdepmap.xsl:"	834413ffc7f650705ce65ca2c89100153142cd92
