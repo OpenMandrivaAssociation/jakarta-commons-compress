@@ -193,3 +193,54 @@ fi
 %defattr(0644,root,root,0755)
 %{_javadocdir}/%{name}-%{version}
 %{_javadocdir}/%{name}
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 0:0.1-4.0.6mdv2011.0
++ Revision: 619741
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 09 2009 Thierry Vignaud <tv@mandriva.org> 0:0.1-4.0.5mdv2010.0
++ Revision: 436044
+- rebuild
+- fix no-buildroot-tag
+- kill re-definition of %%buildroot on Pixel's request
+
+* Sun Dec 16 2007 Anssi Hannula <anssi@mandriva.org> 0:0.1-4.0.4mdv2008.1
++ Revision: 120810
+- buildrequires java-rpmbuild
+
+* Sat Sep 15 2007 Anssi Hannula <anssi@mandriva.org> 0:0.1-4.0.3mdv2008.0
++ Revision: 87402
+- rebuild to filter out autorequires of GCJ AOT objects
+- remove unnecessary Requires(post) on java-gcj-compat
+
+* Sat Aug 18 2007 David Walluck <walluck@mandriva.org> 0:0.1-4.0.2mdv2008.0
++ Revision: 65410
+- fix build without maven calling saxon
+- add macros for /usr/bin
+- actually remove jars before building
+- Import jakarta-commons-compress
+
+
+
+* Thu Aug 02 2007 Alexander Kurtakov <akurtakov@active-lynx.com> - 0:0.1-4.0.1mdv2008.0
+- Use mdv macros
+
+* Wed Aug 01 2007 Ralph Apel <r.apel@r-apel.de> 0:0.1-4jpp
+- Switch to Revision 561811
+- Optionally build without maven
+- Wait for TLP 1.0 for further changes
+
+* Tue May 15 2007 Ralph Apel <r.apel@r-apel.de> 0:0.1-3jpp
+- Make Vendor, Distribution based on macro
+- Fix aot build
+
+* Wed Sep 27 2006 Ralph Apel <r.apel@r-apel.de> 0:0.1-2jpp
+- Upgrade to r450385 as of 2006-09-27
+- Adapt to maven-1.1
+- Add post/postun Requires for javadoc
+- Add gcj_support option
+
+* Mon Sep 05 2005 Ralph Apel <r.apel@r-apel.de> 0:0.1-1jpp
+- First release
