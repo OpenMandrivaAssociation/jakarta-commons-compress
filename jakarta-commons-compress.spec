@@ -43,7 +43,7 @@
 
 Name:           jakarta-%{base_name}
 Version:        0.1
-Release:        %mkrel 4.0.6
+Release:        4.0.7
 Epoch:          0
 Summary:        Commons Compress
 License:        Apache Software License
