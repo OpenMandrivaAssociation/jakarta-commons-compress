@@ -47,7 +47,7 @@ Release:        4.0.7
 Epoch:          0
 Summary:        Commons Compress
 License:        Apache Software License
-Url:            http://jakarta.apache.org/commons/sandbox/compress/
+Url:            https://jakarta.apache.org/commons/sandbox/compress/
 Group:          Development/Java
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0:        commons-compress-0.1-561811.tar.gz
